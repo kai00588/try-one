@@ -1,9 +1,10 @@
-import express from 'express';
-import { engine } from 'express-handlebars';
+const express = require('express');
+// import { engine } from 'express-handlebars';
+const hbs = require('express-handlebars');
 
 const app = express();
 
-app.engine('handlebars', engine());
+app.engine('handlebars', hbs.engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
